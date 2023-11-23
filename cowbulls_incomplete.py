@@ -1,13 +1,24 @@
 import random
 
+cowbullcount=[]                                         #declared list
 def compare_numbers(number, user_guess):
-    ## your code here
-    return cowbull
+    current=0
+    cows=0                                              #initializing variables
+    bulls=0  
+    for i in user_guess:
+        if i in number:
+            cows+=1
+            if number[current]==i:
+                bulls+=1
+        current+=1                                      
+
+    cowbullcount=[cows, bulls]                           
+    return cowbullcount                                  #changed 'cowbull' to 'cowbullcount'
 
 playing = True #gotta play the game
-number = str(random.randint(0,9999)) #random 4 digit number
+number = str(random.randint(0,9999)) #random 4 digit number 
 guesses = 0
-print number
+# removed the 'print(number)' statement                                  
 
 print("Let's play a game of Cowbull!") #explanation
 print("I will generate a number, and you have to guess the numbers one digit at a time.")
@@ -16,7 +27,7 @@ print("The game ends when you get 4 bulls!")
 print("Type exit at any prompt to exit.")
 
 while playing:
-    user_guess = raw_input("Give me your best guess!")
+    user_guess = input("Give me your best guess!")       #replaced 'raw_input' with input()
     if user_guess == "exit":
         break
     cowbullcount = compare_numbers(number,user_guess)
@@ -26,7 +37,7 @@ while playing:
 
     if cowbullcount[1]==4:
         playing = False
-        print("You win the game after " + str(guesses) + "! The number was "+str(number))
+        print("You win the game after " + str(guesses) + " guesses! The number was "+str(number)) #added guesses
         break #redundant exit
     else:
         print("Your guess isn't quite right, try again.")
