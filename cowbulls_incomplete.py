@@ -16,10 +16,17 @@ def compare_numbers(number, user_guess):
     return cowbullcount                                  #changed 'cowbull' to 'cowbullcount'
 
 playing = True #gotta play the game
+<<<<<<< HEAD
 number = str(random.randint(1000,9999)) #random 4 digit number 
 guesses = 0
 # removed the 'print(number)' statement                                  
 print(number)
+=======
+number = str(random.randint(0,9999)) #random 4 digit number 
+guesses = 0
+# removed the 'print(number)' statement                                  
+
+>>>>>>> parent of 6f690fa (cow_bulls final version (fixed an error from v1.0 in line 9)))
 print("Let's play a game of Cowbull!") #explanation
 print("I will generate a number, and you have to guess the numbers one digit at a time.")
 print("For every number that exists in the sequence but is in wrong place, you get a cow. For every one in the right place, you get a bull.")
