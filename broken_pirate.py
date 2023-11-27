@@ -1,5 +1,5 @@
-greeting = input("Hello, possible pirate! What's the password?")   #Fixed inverted commas
-if greeting == ("Arrr!"):                                          #Fixed parenthesis and changed 'in' to '=='
+greeting = input("Hello, possible pirate! What's the password?)
+if greeting in ["Arrr!"):
 	print("Go away, pirate.")
-else:                                                              #Changed elif to else and added a colon
-    print("Greetings, hater of pirates!")                          #Fixed indentation
+elif
+print("Greetings, hater of pirates!")

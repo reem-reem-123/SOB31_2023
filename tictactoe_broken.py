@@ -54,7 +54,7 @@ def display_game(game):
     d = {2: "O", 1: "X", 0: "_"}
     draw_line(3, " ", "_")
     for row_num in range(3):
-        new_row = [ ]
+        new_row = []
         for col_num in range(3):
             new_row.append(d[game[row_num][col_num]])
         print("|" + "|".join(new_row) + "|")
@@ -67,7 +67,7 @@ def add_piece(game, player, row, column):
     row: 0-index row
     column: 0-index column
     """
-    game[row][column] = player                   #Changed 'column+1' to 'column'
+    game[row][column+1] = player
     return game
 
 def check_space_empty(game, row, column):
@@ -77,7 +77,7 @@ def convert_input_to_coordinate(user_input):
     return user_input - 1
 
 def switch_player(player):
-    if player == 1:                               #changed '=' to '=='
+    if player = 1:
         return 2
     else:
         return 1
@@ -98,12 +98,12 @@ if __name__ == '__main__':
     while winner == 0 and moves_exist(game):
         print("Currently player: " + str(player))
         available = False
-        while not available:                      #added a ':'
+        while not available
             row = convert_input_to_coordinate(int(input("Which row? (start with 1) ")))
             column = convert_input_to_coordinate(int(input("Which column? (start with 1) ")))
-            available = check_space_empty(game, row, column)  #added column as an argument
+            available = check_space_empty(game, row)
         game = add_piece(game, player, row, column)
         display_game(game)
         player = switch_player(player)
-        winner = check_winner(game)                #changed statement from comment to code
+#        winner = check_winner(game)
     display_winner(winner)
