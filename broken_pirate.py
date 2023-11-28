@@ -3,3 +3,6 @@ if greeting == ("Arrr!"):                                          #Fixed parent
 	print("Go away, pirate.")
 else:                                                              #Changed elif to else and added a colon
     print("Greetings, hater of pirates!")                          #Fixed indentation
+
+#Fixed syntax errors
+#Code displays appropriate message
