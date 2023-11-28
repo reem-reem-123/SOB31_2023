@@ -61,3 +61,6 @@ if letter_grade == "F":                                       #changed letter-gr
     print ("Student is failing.")                             #Added parenthesis
 else:
     print ("Student is passing.")                             #Added parenthesis
+
+#Fixed all syntax and logical errors
+#Code works and prints perfectly
