@@ -20,7 +20,6 @@ number = str(random.randint(1000,9999)) #random 4 digit number
 guesses = 0
 # removed the 'print(number)' statement                                  
 
-
 #parent of 6f690fa (cow_bulls final version (fixed an error from v1.0 in line 9)
 
 print("Let's play a game of Cowbull!") #explanation
@@ -44,3 +43,5 @@ while playing:
         break #redundant exit
     else:
         print("Your guess isn't quite right, try again.")
+
+#Code works as expected, incomplete function defintion has been completed
